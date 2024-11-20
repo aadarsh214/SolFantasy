@@ -96,7 +96,7 @@ const fetchLiveMatches = async (sport: string) => {
   return matches[sport as keyof typeof matches] || [];
 };
 
-const fetchPlayers = async (matchId: number) => {
+const fetchPlayers = async () => {
   // Simulating API call
   await new Promise(resolve => setTimeout(resolve, 1000));
   
@@ -117,10 +117,10 @@ const fetchPlayers = async (matchId: number) => {
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedSport, setSelectedSport] = useState('cricket');
-  const [matches, setMatches] = useState([]);
-  const [selectedMatch, setSelectedMatch] = useState(null);
-  const [players, setPlayers] = useState([]);
-  const [teams, setTeams] = useState([]);
+  const [matches, setMatches] = useState<any[]>([]);
+  const [selectedMatch, setSelectedMatch] = useState<any | null>(null);
+  const [players, setPlayers] = useState<any[]>([]);
+  const [teams, setTeams] = useState<any[]>([]);
   const [isCreateTeamOpen, setIsCreateTeamOpen] = useState(false);
 
   useEffect(() => {
@@ -136,7 +136,7 @@ const App: React.FC = () => {
   useEffect(() => {
     if (selectedMatch) {
       const loadPlayers = async () => {
-        const fetchedPlayers = await fetchPlayers(selectedMatch.id);
+        const fetchedPlayers = await fetchPlayers();
         setPlayers(fetchedPlayers);
       };
       loadPlayers();
