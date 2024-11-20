@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -7,6 +8,9 @@ const Footer: React.FC = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <div className="text-sm text-gray-500 mb-4 sm:mb-0">
             © 2023 SolFantasy. All rights reserved.
+          </div>
+          <div className="text-md text-gray-700 mb-4 sm:mb-0">
+            <a href={"https://x.com/aadarsh21__"} className='cursor-pointer'>Made by Aadarsh Gupta</a>
           </div>
           <div className="flex flex-wrap justify-center sm:justify-end space-x-6">
             <a href="#" className="text-sm text-gray-500 hover:text-gray-900 mb-2 sm:mb-0">Privacy Policy</a>

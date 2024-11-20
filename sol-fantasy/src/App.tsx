@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import MatchList from './components/MatchList';
 import MatchDetails from './components/MatchDetails';
-import CreateTeam from './components/CreateTeam';
+import CreateTeam from './components/CreateTeams';
 import { Tabs, TabsList, TabsTrigger } from "./components/ui/tabs";
 import { ScrollArea } from "./components/ui/scroll-area";
 
